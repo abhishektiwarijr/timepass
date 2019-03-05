@@ -1,4 +1,4 @@
-package com.example.alexandra.instagramlogin;
+package com.jr.instagramlogin;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -20,15 +20,13 @@ public class AppPreferences {
         return preferences.getString(key, null);
     }
 
-    public void putString(String key, String value)
-    {
+    public void putString(String key, String value) {
         SharedPreferences.Editor editor = preferences.edit();
         editor.putString(key, value);
         editor.apply();
     }
 
-    public void clear()
-    {
+    public void clear() {
         SharedPreferences.Editor editor = preferences.edit();
         editor.clear();
         editor.apply();

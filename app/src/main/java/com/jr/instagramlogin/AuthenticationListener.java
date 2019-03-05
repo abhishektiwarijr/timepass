@@ -1,4 +1,4 @@
-package com.example.alexandra.instagramlogin;
+package com.jr.instagramlogin;
 
 public interface AuthenticationListener {
     void onTokenReceived(String auth_token);

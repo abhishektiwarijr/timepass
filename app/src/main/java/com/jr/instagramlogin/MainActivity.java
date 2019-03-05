@@ -1,4 +1,4 @@
-package com.example.alexandra.instagramlogin;
+package com.jr.instagramlogin;
 
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -23,9 +23,7 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 
-public class MainActivity extends AppCompatActivity
-        implements AuthenticationListener {
-
+public class MainActivity extends AppCompatActivity implements AuthenticationListener {
     private String token = null;
     private AppPreferences appPreferences = null;
     private AuthenticationDialog authenticationDialog = null;
@@ -77,16 +75,15 @@ public class MainActivity extends AppCompatActivity
     }
 
     public void onClick(View view) {
-        if(token!=null)
-        {
+        if (token != null) {
             logout();
-        }
-        else {
+        } else {
             authenticationDialog = new AuthenticationDialog(this, this);
             authenticationDialog.setCancelable(true);
             authenticationDialog.show();
         }
     }
+
     private void getUserInfoByAccessToken(String token) {
         new RequestInstagramAPI().execute();
     }
@@ -120,6 +117,7 @@ public class MainActivity extends AppCompatActivity
                         appPreferences.putString(AppPreferences.USER_ID, jsonData.getString("id"));
                         appPreferences.putString(AppPreferences.USER_NAME, jsonData.getString("username"));
                         appPreferences.putString(AppPreferences.PROFILE_PIC, jsonData.getString("profile_picture"));
+//                        appPreferences.putString(AppPreferences.PROFILE_PIC, jsonData.getString("hd_profile_pic_url_info"));
 
                         //TODO: сохранить еще данные
                         login();
@@ -129,7 +127,7 @@ public class MainActivity extends AppCompatActivity
                 }
 
             } else {
-                Toast toast = Toast.makeText(getApplicationContext(),"Ошибка входа!",Toast.LENGTH_LONG);
+                Toast toast = Toast.makeText(getApplicationContext(), "Ошибка входа!", Toast.LENGTH_LONG);
                 toast.show();
             }
         }

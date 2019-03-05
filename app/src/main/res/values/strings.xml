@@ -1,7 +1,9 @@
 <resources>
-    <string name="app_name">InstagramLogin</string>
-    <string name="client_id">your_client_id</string>
-    <string name="redirect_url">https://instagram.com/</string>
+    <string name="app_name">TimePass</string>
+    <string name="client_id">c1a1543568624b11b8f93559da24c8fc</string>
+    <!--<string name="redirect_url">https://instagram.com/</string>-->
+    <string name="redirect_url">https://www.kiwitechjunior.com/</string>
     <string name="base_url">https://api.instagram.com/</string>
     <string name="get_user_info_url">https://api.instagram.com/v1/users/self/?access_token=</string>
+    <string name="login">Login</string>
 </resources>

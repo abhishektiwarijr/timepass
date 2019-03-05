@@ -9,28 +9,36 @@
         android:id="@+id/btn_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="onClick"
         android:layout_centerHorizontal="true"
-        android:text="INSTAGRAM LOGIN" />
+        android:onClick="onClick"
+        android:text="@string/login" />
 
     <LinearLayout
         android:id="@+id/info"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_below="@+id/btn_login"
-        android:orientation="vertical">
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="16dp">
+
         <ImageView
             android:id="@+id/pic"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:contentDescription="@string/app_name" />
+
         <TextView
             android:id="@+id/id"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp" />
+
         <TextView
             android:id="@+id/name"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp" />
     </LinearLayout>
 
 </RelativeLayout>
